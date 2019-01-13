@@ -1,6 +1,7 @@
 // * {border:1px solid #f00;}
-body {margin: 0; background-color: #3e3e3e; font-family: sans-serif; color: #ddd;}
-h1 {border:2px solid #333; border-radius: 6px; padding: 1rem 2rem;}
+body {margin: 0; background-color: #3e3e3e; font-family: sans-serif; color: #ddd; display:flex; flex-direction:column;}
+body > * {flex: 1;}
+h1 {border:2px solid #ddd; border-radius: 6px; padding: 1rem 2rem;}
 p {padding: 1rem;}
 
 a {color: #ff0; text-decoraion:none;}
@@ -9,5 +10,6 @@ a:hover {background-color: #9e9e9e;}
 ul {list-style-type: none;}
 ul li {line-height: 1.5rem;}
 
-footer ul {display: flex;}
-footer ul li {flex: 1; padding: .5rem}
+footer {max-height: 3rem; border:1px solid #ddd; border-radius: 6px;}
+footer ul {display: flex; padding: .5rem;}
+footer ul li {flex: 1; padding: .5rem; margin: 0 1rem; background-color: #9e9e9e;}
