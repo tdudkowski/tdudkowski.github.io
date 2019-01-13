@@ -1,7 +1,7 @@
 // * {border:1px solid #f00;}
 body {margin: 0; background-color: #3e3e3e; font-family: sans-serif; color: #ddd; display:flex; flex-direction: column; min-height: 100vh;}
 body > * {flex: 1;}
-h1 {border:2px solid #ddd; border-radius: 6px; padding: 1rem 2rem; margin: 0 1rem;}
+h1 {border:2px solid #ddd; border-radius: 6px; padding: 1rem 2rem; margin: 1rem;}
 p {padding: 1rem;}
 
 a {color: #ff0; text-decoraion:none;}
@@ -10,6 +10,6 @@ a:hover {background-color: #9e9e9e;}
 ul {list-style-type: none;}
 ul li {line-height: 1.5rem;}
 
-footer {max-height: 6rem; border:1px solid #ddd; border-radius: 6px;  margin: 0 1rem;}
+footer {max-height: 6rem; border:1px solid #ddd; border-radius: 6px;  margin: 1rem;}
 footer ul {display: flex; padding: .5rem;}
-footer ul li {flex: 1; padding: .5rem; margin: 0 1rem; background-color: #9e9e9e;}
+footer ul li {flex: 1; padding: .5rem; margin: 0 1rem; background-color: #5e5e5e;}
