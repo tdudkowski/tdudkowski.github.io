@@ -1,1 +1,5 @@
-body {margin: 0; background-color: #3e3e3e;}
+* {border:1px solid #f00;}
+body {margin: 0; background-color: #3e3e3e; font-family: sans-serif; color: #ddd;}
+h1 {border:2px solid #333; border-radius: 6px;}
+a {color: #ff0; text-decoraion:none;}
+a:hover {background-color: #9e9e9e;}
