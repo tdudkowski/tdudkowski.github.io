@@ -43,7 +43,6 @@ ul li {
 }
 
 footer {
- max-height: 6rem;
  border: 1px solid #999;
  border-radius: 3px;
  margin: 1rem;
@@ -53,6 +52,7 @@ footer ul {
  display: flex;
  flex-direction: column;
  padding: .5rem;
+ margin: .5rem;
 }
 
 footer ul li {
@@ -73,6 +73,10 @@ footer ul li a:hover {
 }
 
 @media screen and (min-width: 765px) {
+ footer {
+  max-height: 6rem;
+ }
+
  footer ul {
   flex-direction: row;
  }
