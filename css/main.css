@@ -8,15 +8,41 @@ body {
  min-height: 100vh;
 }
 
-body>* {
+body>.container {
  flex: 1;
 }
 
+nav ul {
+ display: flex;
+ width: 30rem;
+ margin: 0;
+ padding-left: 0;
+}
+
+nav ul li {
+ flex: 1;
+ background-color: #303030;
+ margin: 1px;
+}
+
+nav ul li a {
+ display: block;
+ text-align: center;
+ padding: .5rem;
+ color: #eee;
+}
+
+nav ul li a:hover {
+ background-color: #606060;
+ color: #ff0;
+}
+
 h1 {
- border: 2px solid #ddd;
- border-radius: 6px;
+ margin-top: 0;
+ border-top: 2px solid #9d9d9d;
  padding: 1rem 2rem;
- margin: 1rem;
+ background-color: #333;
+ color: #eee;
 }
 
 h2,
@@ -47,9 +73,8 @@ ul li {
 }
 
 footer {
- border: 1px solid #999;
- border-radius: 3px;
- margin: 1rem;
+ background-color: #333;
+ margin: 0;
 }
 
 footer ul {
@@ -60,15 +85,22 @@ footer ul {
 
 footer ul li {
  flex: 1;
- padding: .5rem;
+ display: flex;
  background-color: #4e4e4e;
  border-radius: 3px;
  margin: .5rem;
 }
 
+footer ul li span {
+ flex-basis: 4rem;
+ padding: 1rem;
+
+}
+
 footer ul li a {
- display: inline-block;
- padding: 10px 1rem;
+ flex: 1;
+ text-align: center;
+ padding: 1rem;
 }
 
 footer ul li a:hover {
@@ -76,7 +108,7 @@ footer ul li a:hover {
  text-decoration: none;
 }
 
-@media screen and (min-width: 765px) {
+@media (min-width: 800px) {
  footer {
   max-height: 6rem;
  }
