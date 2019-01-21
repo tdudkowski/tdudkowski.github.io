@@ -1,3 +1,9 @@
+:root {
+ --accent-bg-color: #1f1f1f;
+ --a-bg-hover-color: #606060;
+}
+
+
 body {
  margin: 0;
  background-color: #3e3e3e;
@@ -33,7 +39,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
- background-color: #606060;
+ background-color: var(--a-bg-hover-color);
  color: #ff0;
 }
 
@@ -41,7 +47,7 @@ h1 {
  margin-top: 0;
  border-top: 2px solid #9d9d9d;
  padding: 1rem 2rem;
- background-color: #333;
+ background-color: var(--accent-bg-color);
  color: #eee;
 }
 
@@ -73,7 +79,8 @@ ul li {
 }
 
 footer {
- background-color: #333;
+ background-color: var(--accent-bg-color);
+ ;
  margin: 0;
 }
 
@@ -104,7 +111,8 @@ footer ul li a {
 }
 
 footer ul li a:hover {
- background-color: #6e6e6e;
+ background-color: var(--a-bg-hover-color);
+ ;
  text-decoration: none;
 }
 
