@@ -1,5 +1,6 @@
 :root {
  --accent-bg-color: #1f1f1f;
+ --a-bg-color: #303030;
  --a-bg-hover-color: #606060;
 }
 
@@ -29,7 +30,7 @@ nav ul {
 
 nav ul li {
  flex: 1;
- background-color: #303030;
+ background-color: var(--a-bg-color);
  margin: 1px;
 }
 
@@ -95,7 +96,7 @@ footer ul {
 footer ul li {
  flex: 1;
  display: flex;
- background-color: #4e4e4e;
+ background-color: var(--a-bg-color);
  border-radius: 3px;
  margin: .5rem;
 }
