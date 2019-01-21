@@ -2,6 +2,8 @@
  --accent-bg-color: #1f1f1f;
  --a-bg-color: #303030;
  --a-bg-hover-color: #606060;
+ --nav-a-color: #eee;
+ --nav-a-hover-color: #ff0;
 }
 
 
@@ -38,11 +40,12 @@ nav ul li a {
  display: block;
  text-align: center;
  padding: .5rem;
- color: #eee;
+ color: var(--nav-a-color);
 }
 
 nav ul li a:hover {
  background-color: var(--a-bg-hover-color);
+ color: var(--nav-a-hover-color);
  color: #ff0;
 }
 
@@ -108,19 +111,19 @@ footer ul li {
 footer ul li span {
  flex-basis: 4rem;
  padding: 1rem;
-
 }
 
 footer ul li a {
  flex: 1;
+ color: var(--nav-a-color);
  text-align: center;
  padding: 1rem;
 }
 
 footer ul li a:hover {
  background-color: var(--a-bg-hover-color);
- ;
- text-decoration: none;
+ color: var(--nav-a-hover-color);
+ text-decoration: underline;
 }
 
 @media (min-width: 800px) {
@@ -145,6 +148,6 @@ footer ul li a:hover {
  }
 
  footer ul li {
-  margin: 0 1rem;
+  margin: 0 .3rem;
  }
 }
