@@ -4,6 +4,7 @@
  --a-bg-hover-color: #606060;
  --nav-a-color: #eee;
  --nav-a-hover-color: #ff0;
+ --border-color: #9d9d9d;
 }
 
 
@@ -34,6 +35,7 @@ nav ul li {
  flex: 1;
  background-color: var(--a-bg-color);
  margin: 1px;
+ max-width: 100px;
 }
 
 nav ul li a {
@@ -51,10 +53,19 @@ nav ul li a:hover {
 
 h1 {
  margin-top: 0;
- border-top: 2px solid #9d9d9d;
+ border-top: 2px solid var(--border-color);
  padding: 1rem 2rem;
  background-color: var(--accent-bg-color);
  color: #eee;
+}
+
+main,
+footer ul,
+nav ul,
+h1 div {
+ max-width: 1200px;
+ margin-left: auto;
+ margin-right: auto;
 }
 
 h2,
@@ -110,14 +121,14 @@ footer ul li {
 
 footer ul li span {
  flex-basis: 4rem;
- padding: 1rem;
+ padding: .5rem;
 }
 
 footer ul li a {
  flex: 1;
  color: var(--nav-a-color);
  text-align: center;
- padding: 1rem;
+ padding: .5rem;
 }
 
 footer ul li a:hover {
@@ -149,5 +160,6 @@ footer ul li a:hover {
 
  footer ul li {
   margin: 0 .3rem;
+  border-top: 1px solid var(--border-color);
  }
 }
