@@ -35,7 +35,7 @@ nav ul li {
  flex: 1;
  background-color: var(--a-bg-color);
  margin: 1px;
- max-width: 100px;
+ max-width: 300px;
 }
 
 nav ul li a {
@@ -141,6 +141,10 @@ footer ul li a:hover {
 
  nav ul {
   flex-direction: row;
+ }
+
+ nav ul li {
+  max-width: 100px;
  }
 
  img.ul_logo {
