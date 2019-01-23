@@ -7,7 +7,6 @@
  --border-color: #9d9d9d;
 }
 
-
 body {
  margin: 0;
  background-color: #3e3e3e;
@@ -67,11 +66,13 @@ h1 div {
  max-width: 1200px;
  margin-left: auto;
  margin-right: auto;
+ flex: 1;
 }
 
 h2,
 h3 {
  margin: 1rem;
+ display: block;
 }
 
 p {
@@ -157,6 +158,12 @@ footer ul li a:hover {
 
  footer {
   max-height: 6rem;
+ }
+
+ main ul::after {
+  content: "";
+  clear: both;
+  display: table;
  }
 
  footer ul {
