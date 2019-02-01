@@ -172,6 +172,10 @@ footer ul li a:hover {
   margin: 0 20px;
  }
 
+ ul {
+  margin-left: 100px;
+ }
+
  footer {
   max-height: 6rem;
  }
