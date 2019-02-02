@@ -29,31 +29,7 @@ body>.container {
 }
 
 nav ul {
- display: flex;
- flex-direction: column;
- max-width: 30rem;
- margin: 0;
- padding-left: 0;
-}
-
-nav ul li {
- flex: 1;
- background-color: var(--a-bg-color);
- margin: 1px;
- max-width: 300px;
-}
-
-nav ul li a {
- display: block;
- text-align: center;
- padding: .5rem;
- color: var(--nav-a-color);
-}
-
-nav ul li a:hover {
- background-color: var(--a-bg-hover-color);
- color: var(--nav-a-hover-color);
- color: #ff0;
+ display: none;
 }
 
 h1 {
@@ -152,11 +128,31 @@ footer ul li a:hover {
 @media (min-width: 800px) {
 
  nav ul {
+  display: flex;
+  max-width: 30rem;
+  margin: 0;
+  padding-left: 0;
   flex-direction: row;
  }
 
  nav ul li {
+  flex: 1;
+  background-color: var(--a-bg-color);
+  margin: 1px;
   max-width: 100px;
+ }
+
+ nav ul li a {
+  display: block;
+  text-align: center;
+  padding: .5rem;
+  color: var(--nav-a-color);
+ }
+
+ nav ul li a:hover {
+  background-color: var(--a-bg-hover-color);
+  color: var(--nav-a-hover-color);
+  color: #ff0;
  }
 
  img.ul_logo {
