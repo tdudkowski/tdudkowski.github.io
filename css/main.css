@@ -131,19 +131,13 @@ footer ul {
 
 footer ul li {
  flex: 1;
- display: flex;
  background-color: var(--a-bg-color);
  border-radius: 3px;
  margin: .5rem;
 }
 
-footer ul li span {
- flex-basis: 4rem;
- padding: .5rem;
-}
-
 footer ul li a {
- flex: 1;
+ display: block;
  color: var(--nav-a-color);
  text-align: center;
  padding: .5rem;
