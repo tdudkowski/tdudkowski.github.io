@@ -57,6 +57,9 @@ main {
  max-width: 1200px;
 }
 
+.counter {flex:right:}
+.counter span {bacground-color:#ddd; padding:.3rem;}
+
 h2,
 h3 {
  margin: 1rem;
