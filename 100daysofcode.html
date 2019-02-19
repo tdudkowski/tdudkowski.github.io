@@ -102,7 +102,6 @@
     }
  </style>
 </head>
-
 <body>
   <header>
     <h1>100 Days Of Code</h1>
@@ -110,7 +109,7 @@
       <p>Some collected information about "100 Days Of Code"; #100DaysOfCode</p>
       <p>At this moment my plan is to restrict it only to vanilla JS and git.</p>
     </div>
-    <div class="counter"><span>10</span><br>days passed</div>
+    <div class="counter">day number:<br><span>10</span></div>
   </header>
  <main>
   <section>
@@ -155,19 +154,7 @@
    </ul>
   </section>
  </main>
-   <script>
-    const counter = document.querySelector('.counter span');
-    let number = new Date();
-    if (number.getMonth() == 1) {
-      counter.textContent = number.getDate() - 9;
-    } else if (number.getMonth() == 2) {
-      counter.textContent = number.getDate() + 19;
-    } else if (number.getMonth() == 3) {
-      counter.textContent = number.getDate() + 50;
-    } else if (number.getMonth() == 4) {
-      counter.textContent = number.getDate() + 80;
-    }
-  </script>
+ <script src="counter.js"></script>
 </body>
 
 </html>
