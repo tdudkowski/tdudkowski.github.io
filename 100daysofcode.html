@@ -73,17 +73,45 @@
 
   section ol a:hover {
    color: #333;
-
   }
+  
+      header {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+    }
+
+    header h1 {
+      flex: 1;
+      flex-basis: 100%;
+      width: 100%;
+    }
+
+    .counter {
+      margin-left: auto;
+      background-color: #ddd;
+      font-family: monospace;
+      padding: .4rem;
+      border-radius: 4px;
+      color: #333;
+    }
+
+    .counter span {
+      text-align: center;
+      font-size: 4rem;
+    }
  </style>
 </head>
 
 <body>
- <header>
-  <h1>100 Days Of Code</h1>
-  <p>Some collected information about "100 Days Of Code"; #100DaysOfCode</p>
-  <p>At this moment my plan is to restrict it only to vanilla JS and git.</p>
- </header>
+  <header>
+    <h1>100 Days Of Code</h1>
+    <div>
+      <p>Some collected information about "100 Days Of Code"; #100DaysOfCode</p>
+      <p>At this moment my plan is to restrict it only to vanilla JS and git.</p>
+    </div>
+    <div class="counter"><span>10</span><br>days passed</div>
+  </header>
  <main>
   <section>
    <ul>
@@ -127,6 +155,19 @@
    </ul>
   </section>
  </main>
+   <script>
+    const counter = document.querySelector('.counter span');
+    let number = new Date();
+    if (number.getMonth() == 1) {
+      counter.textContent = number.getDate() - 9;
+    } else if (number.getMonth() == 2) {
+      counter.textContent = number.getDate() + 19;
+    } else if (number.getMonth() == 3) {
+      counter.textContent = number.getDate() + 50;
+    } else if (number.getMonth() == 4) {
+      counter.textContent = number.getDate() + 80;
+    }
+  </script>
 </body>
 
 </html>
