@@ -86,6 +86,11 @@ h3 {
   padding: .5rem .8rem;
 }
 
+.counter span {
+  color: #d22;
+  font-weight: bold;
+}
+
 p {
   padding: 1rem;
 }
