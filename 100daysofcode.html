@@ -2,80 +2,94 @@
 <html lang="en">
 
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta http-equiv="X-UA-Compatible" content="ie=edge">
- <title>100 Days Of Code</title>
- <style>
-  body {
-   margin: 0;
-   min-height: 100vh;
-   display: flex;
-   flex-direction: column;
-   background: linear-gradient(to bottom, #3e3e3e, #3a3a3a 50%, #363636 50%, #303030);
-   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>100 Days Of Code</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(to bottom, #3e3e3e, #3a3a3a 50%, #363636 50%, #303030);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-  header {
-   max-width: 60rem;
-   margin-left: auto;
-   margin-right: auto;
-/*    width: 100%; */
-   padding: 1rem;
-   border: 5px dashed #cc4;
-   border-width: 5px 5px 0 5px;
-   background-color: #332;
-   color: #ddc
-  }
+    header {
+      max-width: 60rem;
+      margin-left: auto;
+      margin-right: auto;
+      /* width: 100%; */
+      padding: 1rem;
+      border: 5px dashed #cc4;
+      border-width: 5px 5px 0 5px;
+      background-color: #332;
+      color: #ddc
+    }
 
-  main {
-   flex: 1;
-   margin-left: auto;
-   margin-right: auto;
-   max-width: 60rem;
-   border: 5px dashed #cc4;
-   border-width: 0 5px 5px 5px;
-   padding: 1rem;
-   background-color: #665;
-  }
+    main {
+      flex: 1;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 60rem;
+      border: 5px dashed #cc4;
+      border-width: 0 5px 5px 5px;
+      padding: 1rem;
+      background-color: #665;
+    }
 
-  h1 {
-   margin-top: 0;
-  }
+    h1 {
+      margin-top: 0;
+    }
 
-  a {
-   color: #dd2;
-  }
+    a {
+      color: #dd2;
+    }
 
-  a:hover {
-   color: #333;
-   background-color: #887;
-  }
+    a:hover {
+      color: #333;
+      background-color: #887;
+    }
 
-  section {
-   background-color: #776;
-   padding: .5rem;
-   margin: 1rem 0;
-  }
+    section {
+      background-color: #776;
+      padding: .5rem;
+      margin: 2rem 0;
+    }
 
-  section ol {
-   background-color: #998;
-   padding: .5rem;
-   padding-left: 2rem;
-   border-radius: 6px;
-   border: 1px dashed #ddd;
-  }
+    section h2 {
+      margin-top: -1.3rem;
+      margin-left: -1rem;
+      padding: .3rem 1rem;
+      text-shadow: 0 0 2px #cc0;
+      background-color: rgba(200, 200, 80, .05);
+      width: fit-content;
+    }
 
-  section ol a {
-   color: #dd2;
-   background-color: #887;
-  }
+    section:hover h2 {
+      text-shadow: 0 0 4px #cc0;
+      background-color: rgba(200, 200, 80, .08);
+    }
 
-  section ol a:hover {
-   color: #333;
-  }
-  
-      header {
+    section ol {
+      background-color: #998;
+      padding: .5rem;
+      padding-left: 2rem;
+      border-radius: 4px;
+      border: 1px dashed #ddd;
+    }
+
+    section ol a {
+      color: #221;
+      /* background-color: #887; */
+    }
+
+    section ol a:hover {
+      color: #333;
+    }
+
+    header {
       display: flex;
       flex-wrap: wrap;
       align-content: space-between;
@@ -85,6 +99,10 @@
       flex: 1;
       flex-basis: 100%;
       width: 100%;
+    }
+
+    header ul {
+      list-style-type: none;
     }
 
     .counter {
@@ -100,61 +118,95 @@
       text-align: center;
       font-size: 4rem;
     }
- </style>
+  </style>
 </head>
+
 <body>
   <header>
     <h1>100 Days Of Code</h1>
-    <div>
-      <p>Some collected information about "100 Days Of Code"; #100DaysOfCode</p>
-      <p>At this moment my plan is to restrict it only to vanilla JS and git.</p>
-    </div>
+    <ul>
+      <li>Some collected information about "100 Days Of Code"; #100DaysOfCode</li>
+      <li>Target: At this moment my plan is to restrict it only to vanilla JS and git.</li>
+      <li>Navigation: <a href="/">back to my Github Page link</a></li>
+    </ul>
     <div class="counter">day number:<br><span>10</span></div>
   </header>
- <main>
-  <section>
-   <ul>
-    <li>Starpoint of an action - <a href="https://www.100daysofcode.com">#100DaysOfCode The Official Website
-      for the Challenge</a></li>
-    <li>Subreddit: <a href="https://www.reddit.com/r/100DaysOfCode/">r/100DaysOfCode</a></li>
-    <li>Article: <a href="https://medium.com/@robewawebdesign/how-100-days-of-code-changed-my-life-37cdc891db73">How
-      100 days of Code changed my life</a></li>
-   </ul>
-  </section>
-  <section>
-   <h2>Plan for the beginning</h2>
-   <p>For the first month I take two basic things to do:</p>
-   <ol>
-    <li><strong>Practice</strong> will be another challenge to do meanwhile: <a href="https://javascript30.com">JavaScript
-      30 —
-      Build 30 things with vanilla JS in 30 days with 30 tutorials</a> - <a href="https://bedeprogramistka.pl/wyzwanie-javascript30/">Wyzwanie
-      JavaScript30 #JS30</a></li>
-    <li><strong>Theory</strong> - recommended book online: <a href="http://eloquentjavascript.net">Eloquent
-      JavaScript 3rd
-      edition</a> - [PL] <a href="http://shebang.pl/kursy/wszystko-jasne/">Kurs JavaScript. I wszystko
-      jasne</a></li>
-    <li>All <strong>exercises</strong> done, are placed here <a href="https://tdudkowski.github.io/JavaScript30">My
-      exercises from JavaScript30</a></li>
-    <li>Progress is <strong>reported</strong> daily on <a href="https://twitter.com/tdudkowski">my Twitter</a>, and a <a href="https://github.com/tdudkowski/100-days-of-code/blob/master/log.md">captains's
-      log</a>.</li>
-   </ol>
-   <p>Later:</p>
-   <ul>
-    <li><a href="https://www.freecodecamp.org/news/learn-javascript-full-course/">Learn JavaScript - Full
-      134-Part Course for Beginners</a></li>
-    <li><a href="https://edabit.com/challenges/javascript">250+ JavaScript Practice Challenges / Edabit</a></li>
-    <li>set of exercises: <a href="https://bedeprogramistka.pl/zadania-do-nauki-programowania/">21 days of
-      codes – darmowe zadania do nauki programowania (lista)</a></li>
-   </ul>
-  </section>
-  <section>
-   <h2>Navigation</h2>
-   <ul>
-    <li><a href="index.html">back to my Github Page link</a></li>
-   </ul>
-  </section>
- </main>
- <script src="counter.js"></script>
+  <main>
+    <section>
+      <h2>Info (what it is)</h2>
+      <ul>
+        <li>Starpoint of an action - <a href="https://www.100daysofcode.com">#100DaysOfCode The Official Website
+            for the Challenge</a></li>
+        <li>Subreddit: <a href="https://www.reddit.com/r/100DaysOfCode/">r/100DaysOfCode</a></li>
+        <li>Article: <a href="https://medium.com/@robewawebdesign/how-100-days-of-code-changed-my-life-37cdc891db73">How
+            100 days of Code changed my life</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Plan (what to do)</h2>
+      <p>Theory -> Practice -> Experience - > Motivation</p>
+      <ol>
+        <li><strong>Theory:</strong> after a few days I decided not to dig a hole in one point only, and everytime when
+          progress' slowing down I'll change a focus; but still the basic reference will be Eloquent JS.
+          <ul>
+            <li><strong>Books</strong>
+              <ul>
+                <li><a href="http://eloquentjavascript.net">Eloquent JavaScript 3rd edition</a>
+                  - [PL] <a href="http://shebang.pl/kursy/wszystko-jasne/">Kurs JavaScript. I wszystko jasne</a></li>
+
+                <li><a href="https://github.com/getify/You-Dont-Know-JS">You Don't Know JS (book series) [YDKJS]</a></li>
+                <li><a href="http://bonsaiden.github.io/JavaScript-Garden/">JavaScript Garden</a></li>
+                <li><a href="https://git-scm.com/doc">git Documentation</a></li>
+                <li><a href="http://marklodato.github.io/visual-git-guide/index-en.html">A Visual Git Reference</a></li>
+                <li><a href="http://gitready.com">git ready &raquo; learn git one commit at a time</a></li>
+              </ul>
+            </li>
+            <li><strong>Courses</strong>
+              <ul>
+                <li>freecodecamp: <a href="https://www.freecodecamp.org/news/learn-javascript-full-course/">Learn
+                    JavaScript - Full 134-Part Course for Beginners</a></li>
+                <li>edx: <a href="https://www.edx.org/course/javascript-introduction">JavaScript Introduction</a></li>
+                <li><a href="https://github.com/leonardomso/33-js-concepts">33 Concepts Every JavaScript Developer
+                    Should Know</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><strong>Practice:</strong> with the same as in theoretical part result, I can't still decide on one only
+          set of tasks to follow up.
+          <ul>
+            <li><a href="https://edabit.com/challenges/javascript">250+ JavaScript Practice Challenges / Edabit</a></li>
+            <li><a href="https://www.hackerrank.com/">HackerRank</a></li>
+            <li><a href="https://www.sololearn.com/Course/JavaScript/">SoloLearn JavaScript Tutorial</a></li>
+            <li><a href="https://exercism.io/my/tracks/javascript">exercism.io: JavaScript Track</a></li>
+            <li><a href="https://www.codewars.com">codewars</a></li>
+            <li><a href="https://github.com/myjinxin2015/Katas-list-of-Training-JS-series">Katas list of Training JS
+                series</a></li>
+            <li><a href="https://learngitbranching.js.org">Learn Git Branching</a></li>
+            <!-- <li><a href="https://codesignal.com">Codesignal</a></li>
+            <li>sets of exercises: <a href="https://bedeprogramistka.pl/zadania-do-nauki-programowania/">21 days of
+              codes – darmowe zadania do nauki programowania (lista)</a></li> -->
+          </ul>
+        </li>
+        <li><strong>Experience:</strong> all exercises done are stored here <a href="#">100DaysOfCoding - exercises</a></li>
+        <li><strong>Motivation:</strong> progress is daily reported on <a href="https://twitter.com/tdudkowski">my
+            Twitter</a>, and a <a href="https://github.com/tdudkowski/100-days-of-code/blob/master/log.md">captains's
+            log</a>.</li>
+      </ol>
+
+    </section>
+    <section>
+      <h2>Finished (what I've done)</h2>
+      <p>Task completed.</p>
+      <ul>
+        <li><strong>#javascript30:</strong> Wes Bos' challenge <a href="https://javascript30.com">JavaScript
+            30 — Build 30 things with vanilla JS in 30 days with 30 tutorials</a> - <a href="https://bedeprogramistka.pl/wyzwanie-javascript30/">Wyzwanie
+            JavaScript30 #JS30</a> - all exercises done are here <a href="https://tdudkowski.github.io/JavaScript30">My
+            exercises from JavaScript30</a></li>
+      </ul>
+    </section>
+  </main>
+  <script src="counter.js"></script>
 </body>
 
 </html>
