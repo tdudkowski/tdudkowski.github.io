@@ -26,13 +26,13 @@ const months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 const startDay = months[0] + 9;
 // today
 const add = function (accumulator, a) { // reducer function
-return accumulator + a;
+ return accumulator + a;
 }
-let todayDay = new Date().getMonth() - 1; // find number of previous months
-if (todayDay >= 0) { // number of days in previous months (if they are)
-  todayDay = months.splice(todayDay, 1).reduce(add);
+let thisMonth = new Date().getMonth(); // find number of previous months
+if (thisMonth >= 0) { // number of days in previous months (if they are)
+ thisMonth = months.splice(0, thisMonth).reduce(add);
 }
-todayDay = (todayDay + new Date().getDate()) - startDay; // add number of days from this month minus start day number
+let todayDay = (thisMonth + new Date().getDate()) - startDay; // add number of days from this month minus start day number
 // show it
 counter.textContent = todayDay;
   
