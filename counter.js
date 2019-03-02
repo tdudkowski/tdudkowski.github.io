@@ -22,17 +22,25 @@
 const counter = document.querySelector('.counter span');
 // number of days in months
 const months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-// start day number - 9th of February
-const startDay = months[0] + 9;
-// today
-const add = function (accumulator, a) { // reducer function
+// start day declaration; first numer is month, second one is a day
+const startDay = '02-09';
+//reducer function
+const add = function (accumulator, a) {
  return accumulator + a;
 }
-let thisMonth = new Date().getMonth(); // find number of previous months
-if (thisMonth >= 0) { // number of days in previous months (if they are)
- thisMonth = months.splice(0, thisMonth).reduce(add);
+// number of days till start day
+let startDateMonths = Number(startDay.slice(0, 2));
+startDateMonths = months.slice(0, startDateMonths - 1).reduce(add);
+let startDateDays = Number(startDay.slice(3));;
+let startDate = startDateMonths + startDateDays;
+// number of days till today
+let daysTillToday = new Date().getMonth(); // find number of previous months
+if (daysTillToday >= 0) { // number of days in previous months (if they are)
+ daysTillToday = months.slice(0, daysTillToday).reduce(add);
+ daysTillToday += new Date().getDate(); // plus days from this month
 }
-let todayDay = (thisMonth + new Date().getDate()) - startDay; // add number of days from this month minus start day number
+// count difference
+let numberOfDays = daysTillToday - startDate;
 // show it
-counter.textContent = todayDay;
+counter.textContent = numberOfDays;
   
