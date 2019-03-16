@@ -2,285 +2,476 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>100 Days Of Code</title>
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      background: linear-gradient(to bottom, #3e3e3e, #3a3a3a 50%, #363636 50%, #303030);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>100 Days Of Code</title>
+ <style>
+   .nonmobile {
+   display: none;
+  }
 
-    header {
-      max-width: 60rem;
-      margin-left: auto;
-      margin-right: auto;
-      /* width: 100%; */
-      padding: 1rem;
-      border: 5px dashed #cc4;
-      border-width: 5px 5px 0 5px;
-      background-color: #332;
-      color: #ddc
-    }
+  body {
+   margin: 0;
+   background-color: #998;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
 
-    main {
-      flex: 1;
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 60rem;
-      border: 5px dashed #cc4;
-      border-width: 0 5px 5px 5px;
-      padding: 1rem;
-      background-color: #665;
-      color: #222;
-    }
+  header {
+   padding-bottom: 1rem;
+  }
 
-    h1 {
-      margin-top: 0;
-    }
+  header ul {
+   padding-left: 1rem;
+   list-style-type: disc;
+  }
 
-    a {
-      color: #cc6;
-      text-decoration: none;
-    }
+  section:nth-of-type(1) {
+   list-style-type: disc;
+  }
 
-    a:hover {
-      color: #333;
-      background-color: #887;
-      text-decoration: underline;
-    }
+  header a {
+   background-color: #332;
+   color: #dbdbca;
+   text-decoration: underline;
+   box-shadow: none;
+  }
 
-    section {
-      background-color: #776;
-      padding: .5rem;
-      margin: 2rem 0;
-    }
+  header,
+  footer {
+   background-color: #332;
+   color: #ddc
+  }
 
-    section h2 {
-      margin-top: -1.3rem;
-      margin-left: -1rem;
-      padding: .3rem 1rem;
-      text-shadow: 0 0 2px #cc0;
-      background-color: rgba(200, 200, 80, .05);
-      width: fit-content;
-    }
+  h1 {
+   margin-top: 0;
+   padding: 0 1rem;
+  }
 
-    section:hover h2 {
-      text-shadow: 0 0 4px #cc0;
-      background-color: rgba(200, 200, 80, .08);
-    }
+  h2 {
+   padding: .2rem 1rem;
+  }
 
-    section ol {
-      /* background-color: #998; */
-      background-color: #8f8f7f;
-      padding: .5rem;
-      padding-left: 2rem;
-      border-radius: 4px;
-      border: 1px dashed #bba;
-      color: #333;
-    }
+  div {
+   background-color: #ddc;
+   color: #332;
+   border-radius: 2px;
+   padding: .5rem;
+   font-size: 1.1rem;
+   text-align: center;
+   width: 10rem;
+   margin-left: auto;
+   margin-right: auto;
+  }
 
-    section ol a {
-      /* color: #221; */
-      color: #dd9;
-      /* background-color: #887; */
-    }
+  div>span {
+   font-family: monospace;
+   font-weight: bold;
+  }
 
-    section ol a:hover {
-      color: #333;
-    }
+  nav.nonmobile,
+  header,
+  section,
+  footer {
+   max-width: 70rem;
+   margin-left: auto;
+   margin-right: auto;
+  }
 
-    header {
-      display: flex;
-      flex-wrap: wrap;
-      align-content: space-between;
-    }
+  section {
+   background-color: #ddc;
+   margin-top: 1rem;
+  }
 
-    header h1 {
-      flex: 1;
-      flex-basis: 100%;
-      width: 100%;
-    }
+  h2 {
+   display: inline-block;
+   margin-top: -1rem;
+   margin-left: -1rem;
+   padding-top: 0;
+   background-color: rgba(221, 221, 102, .6);
+   border: 1px dashed #996;
+   text-shadow: 0 0 2px rgba(221, 221, 102, .6);
+  }
 
-    header ul {
-      list-style-type: none;
-    }
+  p {
+   padding: .6rem;
+  }
 
-    .counter {
-      margin-left: auto;
-      background-color: #ddd;
-      font-family: monospace;
-      padding: .4rem;
-      border-radius: 4px;
-      color: #333;
-    }
+  p.strip {
+   background-color: #dd9;
+   border: 1px dashed #996;
+   border-width: 1px 0;
+  }
 
-    .counter span {
-      text-align: center;
-      font-size: 4rem;
-    }
-  </style>
+  p.strip a {
+   background-color: transparent;
+   font-weight: bold;
+  }
+
+  section>ol>li>strong {
+   display: inline-block;
+   margin-top: .6rem;
+   padding: .3rem;
+   background-color: rgba(221, 221, 102, 1);
+   border: 1px dashed #996;
+   border-radius: 0 30% 30% 0;
+  }
+
+  ol {
+   margin-left: 1.2rem;
+   margin-bottom: 0;
+  }
+
+  ol,
+  ul {
+   padding-left: .5rem;
+   padding-bottom: 1rem;
+  }
+
+  section ol li,
+  section ul li {
+   margin: .1rem 0;
+  }
+
+  a {
+   text-decoration: none;
+   background-color: #dbdbca;
+   box-shadow: 0 1px 0 #bba;
+  }
+
+  a:hover {
+   text-decoration: underline;
+  }
+
+  footer {
+   padding: .5rem 0;
+  }
+
+  nav>ul {
+   padding-left: 0;
+   list-style-type: none;
+   display: flex;
+   flex-direction: column;
+  }
+
+  nav>ul li {
+   flex: 1;
+   margin: .3rem;
+  }
+
+  nav>ul a {
+   display: block;
+   text-align: center;
+   background-color: #332;
+   color: #ddc;
+   padding: .5rem 0;
+   box-shadow: 0 0 2px #ddc;
+  }
+
+  nav>ul a:hover {
+   box-shadow: 0 0 3px #dd3;
+  }
+
+  @media (min-width:475px) {
+   .mobile {
+    display: none;
+   }
+
+   .nonmobile {
+    display: block;
+    height: inherit
+   }
+
+   body {
+    background: linear-gradient(to bottom, #3e3e3e, #3a3a3a 50%, #363636 50%, #303030);
+    background-size: 100% 5px;
+   }
+
+   nav.nonmobile ul {
+    margin: 0;
+   }
+
+   header {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+    border-top: 2px dashed #dd3;
+   }
+
+   header ul {
+    margin-top: 0;
+   }
+
+   h1 {
+    flex: 1;
+    flex-basis: 100%;
+   }
+
+   h1,
+   h2 {
+    margin: 0 0 .5rem .5rem;
+    padding-top: 1rem;
+   }
+
+   h2 {
+    margin-top: -.2rem;
+    transform: rotate(-.5deg);
+    transform-origin: left top;
+    transition: .2s;
+   }
+
+   section:hover h2 {
+    background-color: rgba(221, 221, 102, .8);
+    transform: rotate(0);
+    margin-left: -.2rem;
+   }
+
+   div {
+    margin-left: auto;
+    margin-right: 2rem;
+    width: 8rem;
+   }
+
+   div>span {
+    font-size: 1.7rem;
+   }
+
+   ul {
+    margin-bottom: 0;
+    padding-left: 1rem;
+   }
+
+   header>ul,
+   section>ul {
+    margin-left: .8rem;
+   }
+
+   nav>ul {
+    flex-direction: row;
+   }
+
+   section>ol>li {
+    position: relative;
+   }
+
+   section>ol>li::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    left: -2rem;
+    top: .5rem;
+    border: 2px solid #996;
+   }
+  }
+ </style>
 </head>
 
 <body>
-  <header>
-    <h1>100 Days Of Code</h1>
-    <ul>
-      <li>Some collected information about "100 Days Of Code"; #100DaysOfCode</li>
-      <li>Target: At this moment my plan is to restrict it only to vanilla JS and git.</li>
-      <li>Navigation: <a href="/">back to my Github Page link</a></li>
-    </ul>
-    <div class="counter">day number:<br><span>10</span></div>
-  </header>
-  <main>
-    <section>
-      <h2>Info (what it is)</h2>
-      <ul>
-        <li>Starpoint of an action - <a href="https://www.100daysofcode.com">#100DaysOfCode The Official Website
-            for the Challenge</a></li>
-        <li>Subreddit: <a href="https://www.reddit.com/r/100DaysOfCode/">r/100DaysOfCode</a></li>
-        <li>Article: <a href="https://medium.com/@robewawebdesign/how-100-days-of-code-changed-my-life-37cdc891db73">How
-            100 days of Code changed my life</a></li>
-        <li><a href="https://github.com/nas5w/100-days-of-code-frontend">#100DaysOfCode Front-End Development</a> -
-          curriculum for learning front-end development</li>
-      </ul>
-    </section>
-    <section>
-      <h2>Plan (what to do)</h2>
-      <p>Theory -> Practice -> Experience - > Motivation</p>
-      <ol>
-        <li><strong>Theory:</strong> after a few first days I decided not to dig a hole in one point only, and
-          everytime when progress' slowing down I'll change a focus; but still the basic reference will be Eloquent JS.
-          <ul>
-            <li><strong>Books</strong>
-              <ul>
-                <li><a href="http://eloquentjavascript.net">Eloquent JavaScript 3rd edition</a>
-                  - [PL] <a href="http://shebang.pl/kursy/wszystko-jasne/">Kurs JavaScript. I wszystko jasne</a></li>
+ <nav class="top nonmobile">
+  <ul>
+   <li><a href="#">Github Page</a></li>
+   <li><a href="#">Homepage</a></li>
+   <li><a href="#">Twitter</a></li>
+  </ul>
+ </nav>
+ <header>
+  <h1>100 Days Of Code</h1>
+  <ul>
+   <li>Some collected information about "100 Days Of Code"; #100DaysOfCode</li>
+   <li>Target: At this moment my plan is to restrict it only to vanilla JS and git.</li>
+   <span class="mobile">
+    <li>Navigation: <a href="/">back to my Github Page link</a></li>
+   </span>
+  </ul>
+  <div class="counter">day number:<br><span>10</span></div>
+ </header>
+ <main>
+  <section>
+   <h2>Info (what it is)</h2>
+   <ul>
+    <li>Starpoint of an action - <a href="https://www.100daysofcode.com">#100DaysOfCode The Official Website
+      for the Challenge</a></li>
+    <li>Subreddit: <a href="https://www.reddit.com/r/100DaysOfCode/">r/100DaysOfCode</a></li>
+    <li>Article: <a href="https://medium.com/@robewawebdesign/how-100-days-of-code-changed-my-life-37cdc891db73">How
+      100 days of Code changed my life</a></li>
+    <li><a href="https://github.com/nas5w/100-days-of-code-frontend">#100DaysOfCode Front-End Development</a> -
+     curriculum for learning front-end development</li>
+   </ul>
+  </section>
+  <section>
+   <h2>Plan (what to do)</h2>
+   <p class="strip"><a href="#theory">Theory</a> -> <a href="#practice">Practice</a> -> <a href="#experience">Experience</a>
+    - > <a href="#motivation">Motivation</a></p>
+   <ol>
+    <li><strong><a id="theory"></a>Theory:</strong> after a few first days I decided not to dig a hole in one point
+     only, and
+     everytime when progress' slowing down I'll change a focus; but still the basic reference will be Eloquent JS.
+     <ol>
+      <li><strong>Books</strong>
+       <ul>
+        <li><a href="http://eloquentjavascript.net">Eloquent JavaScript 3rd edition</a>
+         - [PL] <a href="http://shebang.pl/kursy/wszystko-jasne/">Kurs JavaScript. I wszystko jasne</a></li>
 
-                <li><a href="https://github.com/getify/You-Dont-Know-JS">You Don't Know JS (book series) [YDKJS]</a></li>
-                <li><a href="http://bonsaiden.github.io/JavaScript-Garden/">JavaScript Garden</a></li>
-                <li><a href="http://exploringjs.com/es6.html">Exploring ES6 A book by Dr. Axel Rauschmayer</a></li>
-                <li><a href="http://read.humanjavascript.com">Human JavaScript</a></li>
-                <li><a href="https://leanpub.com/javascriptallongesix/read">JavaScript Allongé, the "Six" Edition</a></li>
-                <li><a href="https://github.com/trekhleb/javascript-algorithms">JavaScript Algorithms and Data
-                    Structures</a></li>
-                <li><a href="http://speakingjs.com/es5/index.html">Speaking JavaScript</a></li>
-                <li><a href="https://git-scm.com/doc">git Documentation</a></li>
-                <li><a href="http://marklodato.github.io/visual-git-guide/index-en.html">A Visual Git Reference</a></li>
-                <li><a href="http://gitready.com">git ready &raquo; learn git one commit at a time</a></li>
-              </ul>
-            </li>
-            <li><strong>Courses</strong>
-              <ul>
-                <li>freecodecamp: <a href="https://www.freecodecamp.org/news/learn-javascript-full-course/">Learn
-                    JavaScript - Full 134-Part Course for Beginners</a> <a href="https://www.youtube.com/watch?v=PkZNo7MFNFg">[YT
-                    Learn JavaScript - Full Course for Beginners (3:26:42)]</a></li>
-                <li>edx: <a href="https://www.edx.org/course/javascript-introduction">JavaScript Introduction</a></li>
-                <li>TutorialRepublic: <a href="https://www.tutorialrepublic.com/javascript-tutorial/">JavaScript
-                    Tutorial</a></li>
-                <li>tutorialspoint.com: <a href="https://www.tutorialspoint.com/javascript/index.htm">Javascript
-                    Tutorial</a></li>
-                <li><a href="https://devdocs.io/javascript/">JavaScript Documentation (MDN)</a></li>
-                <li>MDN: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">JavaScript Guide</a></li>
-                <li>Watch and Code: <a href="https://watchandcode.com/p/practical-javascript">Practical JavaScript</a></li>
-                <li>Codecademy: <a href="https://www.codecademy.com/learn/introduction-to-javascript">Introduction To
-                    JavaScript</a></li>
-                <li>Udacity: <a href="https://eu.udacity.com/course/intro-to-javascript--ud803">Intro to JavaScript</a></li>
-                <li>MDB: <a href="https://mdbootstrap.com/education/javascript/">JavaScript Tutorial – easy &amp; free
-                    JavaScript course for beginners</a></li>
-                <li>Rithm School: <a href="https://www.rithmschool.com/courses#jsfundamentals">JavaScript Fundamentals</a></li>
-                <li>StackChief: <a href="https://www.stackchief.com/tutorials/JavaScript%20ES6%20Intro">JavaScript
-                    ES6 Intro</a></li>
-                <li><a href="https://www.joovintechcafe.info/javascript/">"Learn Javascript In One Day [ 24
-                    Hours ] – Complete Guide For Beginners"</a></li>
-                <li><a href="https://github.com/leonardomso/33-js-concepts">33 Concepts Every JavaScript Developer
-                    Should Know</a></li>
-                <li><a href="https://learnjavascript.online">Learn JavaScript</a> (first 40 lessons for free)</li>
-                <li><a href="https://coursesbuddy.com/javascript-courses/">"JavaScript Courses: Learn With 20+ Best
-                    Training 2019!"</a></li>
-                <li><a href="https://codeburst.io/top-5-new-javascript-open-source-projects-this-month-august-2018-f7b5fb9a7af5">"Top
-                    5 New JavaScript Open Source Projects this month — August 2018"</a></li>
-              </ul>
-            </li>
-            <li><strong>Top10 topics to grok in 2nd half #DOC</strong>
-              <ul>
-                <li><strong>High Order Functions:</strong> <a href="https://medium.com/@alex_permyakov/15-useful-javascript-examples-of-map-reduce-and-filter-74cbbb5e0a1f">"15 Useful JavaScript Examples of .map(), .reduce() and .filter()"</a></li>
-                <li><strong>encapsulation:</strong></li>
-                <li><strong>callback:</strong></li>
-                <li><strong>clojure:</strong></li>
-                <li><strong>this:</strong> - <a href="https://blog.kiprosh.com/understanding-this-keyword-in-javascript-and-react/">"Understanding "this" keyword in Javascript & React"</a> | <a href="https://stackoverflow.com/questions/3127429/how-does-the-this-keyword-work">How does the “this” keyword work?</a> |  | <a href="https://medium.freecodecamp.org/a-guide-to-this-in-javascript-e3b9daef4df1">"A guide to this in JavaScript"</a> | <a href="https://itnext.io/javascript-wizard-whats-up-with-this-92ca309172d6">"JavaScript Wizard: What’s up with ‘this’?"</a> | <a href="https://itnext.io/the-this-keyword-in-javascript-demystified-c389c92de26d">"The ‘this’ keyword in JavaScript, demystified"</a> | <a href="https://codeburst.io/javascript-context-this-keyword-9a78a19d5786">Javascript Context — this keyword</a> | <a href="https://www.youtube.com/watch?v=9PyFD-E2JRk">Mastering "this" in JavaScript - Intermediate JavaScript #2 YT 13:28</a></li>
-                <li><strong>OOP:</strong> - <a href="https://medium.freecodecamp.org/a-guide-to-prototype-based-class-inheritance-in-javascript-84953db26df0">"A guide to prototype-based class inheritance in JavaScript"</a> |  <a href="https://medium.com/front-end-weekly/a-thing-or-two-about-objects-in-javascript-c426a12e8b5f">"A thing or two about Objects in JavaScript"</a> | <a href="https://blog.bitsrc.io/diving-deeper-in-javascripts-objects-318b1e13dc12">Diving Deeper in JavaScripts Objects</a> | <a href="https://blog.bitsrc.io/the-chronicles-of-javascript-objects-2d6b9205cd66">"The Chronicles of JavaScript Objects"</a> | <a href="https://www.youtube.com/watch?v=z5n3tZKtig0">Objects in Javascript | javascript tutorials for beginners #7 13:37</a></li>
-                <li><strong>Functional Programming:</strong> <a href="https://dev.to/leandrotk_/functional-programming-principles-in-javascript-26g7">Functional Programming Principles in Javascript</a> | <a href="https://itnext.io/the-power-of-functional-programming-in-javascript-cc9797a42b60">"The power of functional programming in Javascript"</a> | <a href="https://www.matthewgerstman.com/functional-programming-fundamentals/">Functional Programming Fundamentals</a></li>
-                <li><strong>destructuring:</strong></li>
-                <li><strong>promise</strong> <a href="https://itnext.io/promises-the-definitive-guide-6a49e0dbf3b7">"Promises: The Definitive Guide"</a> | <a href="https://blog.codemy.net/javascript-fetch-api-cheatsheet/">JavaScript Fetch API Cheatsheet</a> | <a href="http://jarednielsen.com/javascript-promises/">Learn JavaScript Promises and Promise Methods</a> | <a href="https://itnext.io/promise-mate-delegating-asynchronous-results-in-javascript-895c912069e3">Promise Mate: Delegating asynchronous results in JavaScript</a></li>
-                <li><strong>Asynchronous Programming - async/await:</strong></li>
-              </ul>
-            </li>
+        <li><a href="https://github.com/getify/You-Dont-Know-JS">You Don't Know JS (book series) [YDKJS]</a></li>
+        <li><a href="http://bonsaiden.github.io/JavaScript-Garden/">JavaScript Garden</a></li>
+        <li><a href="http://exploringjs.com/es6.html">Exploring ES6 A book by Dr. Axel Rauschmayer</a></li>
+        <li><a href="http://read.humanjavascript.com">Human JavaScript</a></li>
+        <li><a href="https://leanpub.com/javascriptallongesix/read">JavaScript Allongé, the "Six" Edition</a></li>
+        <li><a href="https://github.com/trekhleb/javascript-algorithms">JavaScript Algorithms and Data
+          Structures</a></li>
+        <li><a href="http://speakingjs.com/es5/index.html">Speaking JavaScript</a></li>
+        <li><a href="https://git-scm.com/doc">git Documentation</a></li>
+        <li><a href="http://marklodato.github.io/visual-git-guide/index-en.html">A Visual Git Reference</a></li>
+        <li><a href="http://gitready.com">git ready &raquo; learn git one commit at a time</a></li>
+       </ul>
+      </li>
+      <li><strong>Courses</strong>
+       <ul>
+        <li>freecodecamp: <a href="https://www.freecodecamp.org/news/learn-javascript-full-course/">Learn
+          JavaScript - Full 134-Part Course for Beginners</a> <a href="https://www.youtube.com/watch?v=PkZNo7MFNFg">[YT
+          Learn JavaScript - Full Course for Beginners (3:26:42)]</a></li>
+        <li>edx: <a href="https://www.edx.org/course/javascript-introduction">JavaScript Introduction</a></li>
+        <li>TutorialRepublic: <a href="https://www.tutorialrepublic.com/javascript-tutorial/">JavaScript
+          Tutorial</a></li>
+        <li>tutorialspoint.com: <a href="https://www.tutorialspoint.com/javascript/index.htm">Javascript
+          Tutorial</a></li>
+        <li><a href="https://devdocs.io/javascript/">JavaScript Documentation (MDN)</a></li>
+        <li>MDN: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">JavaScript Guide</a></li>
+        <li>Watch and Code: <a href="https://watchandcode.com/p/practical-javascript">Practical JavaScript</a></li>
+        <li>Codecademy: <a href="https://www.codecademy.com/learn/introduction-to-javascript">Introduction To
+          JavaScript</a></li>
+        <li>Udacity: <a href="https://eu.udacity.com/course/intro-to-javascript--ud803">Intro to JavaScript</a></li>
+        <li>MDB: <a href="https://mdbootstrap.com/education/javascript/">JavaScript Tutorial – easy &amp; free
+          JavaScript course for beginners</a></li>
+        <li>Rithm School: <a href="https://www.rithmschool.com/courses#jsfundamentals">JavaScript Fundamentals</a></li>
+        <li>StackChief: <a href="https://www.stackchief.com/tutorials/JavaScript%20ES6%20Intro">JavaScript
+          ES6 Intro</a></li>
+        <li>Learn.co: <a href="https://learn.co/courses/introduction-to-javascript">Intro to JavaScript</a></li>
+        <li><a href="https://www.joovintechcafe.info/javascript/">"Learn Javascript In One Day [ 24
+          Hours ] – Complete Guide For Beginners"</a></li>
+        <li><a href="https://github.com/leonardomso/33-js-concepts">33 Concepts Every JavaScript Developer
+          Should Know</a></li>
+        <li><a href="https://learnjavascript.online">Learn JavaScript</a> (first 40 lessons for free)</li>
+        <li><a href="https://coursesbuddy.com/javascript-courses/">"JavaScript Courses: Learn With 20+ Best
+          Training 2019!"</a></li>
+        <li><a href="https://codeburst.io/top-5-new-javascript-open-source-projects-this-month-august-2018-f7b5fb9a7af5">"Top
+          5 New JavaScript Open Source Projects this month — August 2018"</a></li>
+       </ul>
+      </li>
+      <li><strong>Top10 topics to grok in 2nd half #100DOC</strong>
+       <ul>
+        <li><strong>High Order Functions:</strong> <a href="https://medium.com/@alex_permyakov/15-useful-javascript-examples-of-map-reduce-and-filter-74cbbb5e0a1f">"15
+          Useful JavaScript Examples of .map(), .reduce() and .filter()"</a></li>
+        <li><strong>encapsulation:</strong></li>
+        <li><strong>callback:</strong></li>
+        <li><strong>clojure:</strong></li>
+        <li><strong>this:</strong> - <a href="https://blog.kiprosh.com/understanding-this-keyword-in-javascript-and-react/">"Understanding
+          "this" keyword in Javascript & React"</a> | <a href="https://stackoverflow.com/questions/3127429/how-does-the-this-keyword-work">How
+          does the “this” keyword work?</a> | | <a href="https://medium.freecodecamp.org/a-guide-to-this-in-javascript-e3b9daef4df1">"A
+          guide to this in JavaScript"</a> | <a href="https://itnext.io/javascript-wizard-whats-up-with-this-92ca309172d6">"JavaScript
+          Wizard: What’s up with ‘this’?"</a> | <a href="https://itnext.io/the-this-keyword-in-javascript-demystified-c389c92de26d">"The
+          ‘this’ keyword in JavaScript, demystified"</a> | <a href="https://codeburst.io/javascript-context-this-keyword-9a78a19d5786">Javascript
+          Context — this keyword</a> | <a href="https://www.youtube.com/watch?v=9PyFD-E2JRk">Mastering "this"
+          in JavaScript - Intermediate JavaScript #2 YT 13:28</a></li>
+        <li><strong>OOP:</strong> - <a href="https://medium.freecodecamp.org/a-guide-to-prototype-based-class-inheritance-in-javascript-84953db26df0">"A
+          guide to prototype-based class inheritance in JavaScript"</a> | <a href="https://medium.com/front-end-weekly/a-thing-or-two-about-objects-in-javascript-c426a12e8b5f">"A
+          thing or two about Objects in JavaScript"</a> | <a href="https://blog.bitsrc.io/diving-deeper-in-javascripts-objects-318b1e13dc12">Diving
+          Deeper in JavaScripts Objects</a> | <a href="https://blog.bitsrc.io/the-chronicles-of-javascript-objects-2d6b9205cd66">"The
+          Chronicles of JavaScript Objects"</a> | <a href="https://www.youtube.com/watch?v=z5n3tZKtig0">Objects
+          in Javascript | javascript tutorials for beginners #7 13:37</a></li>
+        <li><strong>Functional Programming:</strong> <a href="https://dev.to/leandrotk_/functional-programming-principles-in-javascript-26g7">Functional
+          Programming Principles in Javascript</a> | <a href="https://itnext.io/the-power-of-functional-programming-in-javascript-cc9797a42b60">"The
+          power of functional programming in Javascript"</a> | <a href="https://www.matthewgerstman.com/functional-programming-fundamentals/">Functional
+          Programming Fundamentals</a></li>
+        <li><strong>destructuring:</strong> <a href="https://levelup.gitconnected.com/9-tricks-for-kickass-javascript-developers-in-2019-eb01dd3def2a">9
+          Tricks for Kickass JavaScript Developers in 2019</a></li>
+        <li><strong>promise</strong> <a href="https://itnext.io/promises-the-definitive-guide-6a49e0dbf3b7">"Promises:
+          The Definitive Guide"</a> | <a href="https://blog.codemy.net/javascript-fetch-api-cheatsheet/">JavaScript
+          Fetch API Cheatsheet</a> | <a href="http://jarednielsen.com/javascript-promises/">Learn JavaScript
+          Promises and Promise Methods</a> | <a href="https://itnext.io/promise-mate-delegating-asynchronous-results-in-javascript-895c912069e3">Promise
+          Mate: Delegating asynchronous results in JavaScript</a> | <a href="https://finecoding.org/promisified-events-using-the-facade-pattern-b0b788806cdc">"Promisified
+          events using the Façade pattern"</a></li>
+        <li><strong>Asynchronous Programming - async/await:</strong></li>
+       </ul>
+      </li>
 
-          </ul>
-        </li>
-        <li><strong>Practice:</strong> with the same as in theoretical part result, I can't still decide on one only
-          set of tasks to follow up.
-          <ul>
-            <li>Edabit: <a href="https://edabit.com/challenges/javascript">250+ JavaScript Practice Challenges / Edabit</a></li>
-            <li><a href="https://www.hackerrank.com/">HackerRank</a></li>
-            <li><a href="https://www.sololearn.com/Course/JavaScript/">SoloLearn JavaScript Tutorial</a></li>
-            <li><a href="https://exercism.io/my/tracks/javascript">exercism.io: JavaScript Track</a></li>
-            <li><a href="https://www.codewars.com/?language=javascript">codewars - JavaScript</a></li>
-            <li><a href="https://github.com/myjinxin2015/Katas-list-of-Training-JS-series">Katas list of Training JS
-                series</a></li>
-            <li>W3C: <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercises.php">JavaScript
-                basic - Exercises, Practice, Solution</a></li>
-            <li>ChallengeRocket: <a href="https://challengerocket.com/javascript-part1">Quick JavaScript Test - Part 1</a></li>
-            <li><a href="https://github.com/tcorral/javascript-challenges-book">Javascript Challenges</a></li>
-            <li><a href="https://learngitbranching.js.org">Learn Git Branching</a></li>
-            <li><a href="https://coderslab.pl/pl/javascript-challenge/zmienne">JavaScript Challenge IT Coders Lab</a></li>
-            <!-- <li><a href="https://codesignal.com">Codesignal</a></li>
+     </ol>
+    </li>
+    <li><strong><a id="practice"></a>Practice:</strong> with the same as in theoretical part result, I can't still
+     decide on one only
+     set of tasks to follow up.
+     <ul>
+      <li>Edabit: <a href="https://edabit.com/challenges/javascript">250+ JavaScript Practice Challenges / Edabit</a></li>
+      <li><a href="https://www.hackerrank.com/">HackerRank</a></li>
+      <li><a href="https://www.sololearn.com/Course/JavaScript/">SoloLearn JavaScript Tutorial</a></li>
+      <li><a href="https://exercism.io/my/tracks/javascript">exercism.io: JavaScript Track</a></li>
+      <li><a href="https://www.codewars.com/?language=javascript">codewars - JavaScript</a></li>
+      <li><a href="https://github.com/myjinxin2015/Katas-list-of-Training-JS-series">Katas list of Training JS
+        series</a></li>
+      <li>W3C: <a href="https://www.w3resource.com/javascript-exercises/javascript-basic-exercises.php">JavaScript
+        basic - Exercises, Practice, Solution</a></li>
+      <li>ChallengeRocket: <a href="https://challengerocket.com/javascript-part1">Quick JavaScript Test - Part 1</a></li>
+      <li><a href="https://github.com/tcorral/javascript-challenges-book">Javascript Challenges</a></li>
+      <li><a href="https://learngitbranching.js.org">Learn Git Branching</a></li>
+      <li><a href="https://coderslab.pl/pl/javascript-challenge/zmienne">JavaScript Challenge IT Coders Lab</a></li>
+      <!-- <li><a href="https://codesignal.com">Codesignal</a></li>
             <li>sets of exercises: <a href="https://bedeprogramistka.pl/zadania-do-nauki-programowania/">21 days of
               codes – darmowe zadania do nauki programowania (lista)</a></li> -->
-          </ul>
-        </li>
-        <li><strong>Experience:</strong> all exercises done are stored here <a href="https://tdudkowski.github.io/JavaScript30">100DaysOfCoding
-            - exercises</a></li>
-        <li><strong>Motivation:</strong> progress is daily reported on <a href="https://twitter.com/tdudkowski">my
-            Twitter</a>, and a <a href="https://github.com/tdudkowski/100-days-of-code/blob/master/log.md">captains's
-            log</a>.</li>
-      </ol>
+     </ul>
+    </li>
+    <li><strong><a id="experience"></a>Experience:</strong> all exercises done are stored here <a href="https://tdudkowski.github.io/JavaScript30">100DaysOfCoding
+      - exercises</a> At this moment I'm fully engaged in a Javascript part of curriculum at freeCodeCamp</li>
+    <li><strong><a id="motivation"></a>Motivation:</strong> progress is daily reported on <a href="https://twitter.com/tdudkowski">my
+      Twitter</a>, and a <a href="https://github.com/tdudkowski/100-days-of-code/blob/master/log.md">captains's
+      log</a>.</li>
+   </ol>
 
-    </section>
-    <section>
-      <h2>Finished (what I've done)</h2>
-      <p>Task completed.</p>
-      <ul>
-        <li><strong>#javascript30:</strong> Wes Bos' challenge <a href="https://javascript30.com">JavaScript
-            30 — Build 30 things with vanilla JS in 30 days with 30 tutorials</a> - <a href="https://bedeprogramistka.pl/wyzwanie-javascript30/">Wyzwanie
-            JavaScript30 #JS30</a> - all exercises done are here <a href="https://tdudkowski.github.io/JavaScript30">My
-            exercises from JavaScript30</a></li>
-        <li><strong>freeCodeCamp:</strong> from Curriculum - <a href="https://learn.freecodecamp.org/">Basic
-            JavaScript, ES6</a> - <a href="https://scrimba.com/g/ges6">Learn modern JavaScript ES6 - part of curriculum
-            as interactive Scrimba screencasts.</a> | <a href="https://scrimba.com/g/gregularexpressions">Learn Regular Expressions (34 tutorials)</a></li>
-        <li><strong>hackerrank:</strong> <a href="https://www.hackerrank.com/domains/tutorials/10-days-of-javascript">10
-            Days of Javascript</a></li>
-      </ul>
-    </section>
-    <ul><strong>Basic set of WP plugins</strong>
-      <li>Akismet antyspam Autor: Automattic</li>
-      <li>All in One SEO Pack Autor: Michael Torbert</li>
-      <li>All In One WP Security Autor: Tips and Tricks HQ, Peter Petreski, Ruhul, Ivy</li>
-      <li>Elementor Autor: Elementor.com</li>
-      <li>Google Analytics Dashboard for WP (GADWP) Autor: ExactMetrics</li>
-      <li>Google XML Sitemaps Autor: Arne Brachhold</li>
-      <li>Jetpack z WordPress.com Autor: Automattic</li>
-      <li>Yoast SEO Autor: Zespół Yoast</li>
-      <li>Themes: GeneratePress - WP Bootstrap 4 - WP Bootstrap Starter</li>
-    </ul>
-  </main>
-  <script src="counter.js"></script>
+  </section>
+  <section>
+   <h2>Finished (what I've done)</h2>
+   <p>Tasks completed.</p>
+   <ul>
+    <li><strong>#javascript30:</strong> Wes Bos' challenge <a href="https://javascript30.com">JavaScript
+      30 — Build 30 things with vanilla JS in 30 days with 30 tutorials</a> - <a href="https://bedeprogramistka.pl/wyzwanie-javascript30/">Wyzwanie
+      JavaScript30 #JS30</a> - all exercises done are here <a href="https://tdudkowski.github.io/JavaScript30">My
+      exercises from JavaScript30</a></li>
+    <li><strong>freeCodeCamp:</strong> from Curriculum - <a href="https://learn.freecodecamp.org/">Basic
+      JavaScript, ES6</a> - <a href="https://scrimba.com/g/ges6">Learn modern JavaScript ES6 - part of curriculum
+      as interactive Scrimba screencasts.</a> | <a href="https://scrimba.com/g/gregularexpressions">Learn Regular
+      Expressions (34 tutorials)</a></li>
+    <li><strong>hackerrank:</strong> <a href="https://www.hackerrank.com/domains/tutorials/10-days-of-javascript">10
+      Days of Javascript</a></li>
+   </ul>
+  </section>
+  <section>
+   <h2>(unrelated) Basic set of WP plugins</h2>
+   <ul>
+    <li>Akismet antyspam Autor: Automattic</li>
+    <li>All in One SEO Pack Autor: Michael Torbert</li>
+    <li>All In One WP Security Autor: Tips and Tricks HQ, Peter Petreski, Ruhul, Ivy</li>
+    <li>Elementor Autor: Elementor.com</li>
+    <li>Google Analytics Dashboard for WP (GADWP) Autor: ExactMetrics</li>
+    <li>Google XML Sitemaps Autor: Arne Brachhold</li>
+    <li>Jetpack z WordPress.com Autor: Automattic</li>
+    <li>Yoast SEO Autor: Zespół Yoast</li>
+    <li>Themes: GeneratePress - WP Bootstrap 4 - WP Bootstrap Starter</li>
+   </ul>
+  </section>
+ </main>
+ <footer>
+  <nav>
+   <ul>
+    <li><a href="#">to the top</a></li>
+    <li><a href="#">Github Page</a></li>
+    <li><a href="#">Homepage</a></li>
+    <li><a href="#">Twitter</a></li>
+   </ul>
+  </nav>
+ </footer>
+ <script src="counter.js"></script>
 </body>
 
 </html>
