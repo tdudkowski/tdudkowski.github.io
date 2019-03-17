@@ -224,13 +224,175 @@
 
     <h3 id="string">String methods</h3>
     <dl>
+      <dt>charAt()</dt>
+      <dd>
+        <ul>
+          <li>finds the character at the specified index (starts with 0, -1 is the last one) in a string</li>
+          <li>returns it</li>
+        </ul>
+      </dd>
+
+      <dt>concat()</dt>
+      <dd>
+        <ul>
+          <li>joins two or more strings, those after first are passed as an arguments; does ot change them</li>
+          <li>returns new concatenated string</li>
+        </ul>
+      </dd>
+
+      <dt>includes()</dt>
+      <dd>
+        <ul>
+          <li>checks if the calling string contains a string passed as an argument; case sensitive</li>
+          <li>returns bolean</li>
+        </ul>
+      </dd>
+
+      <dt>endsWith()</dt>
+      <dd>
+        <ul>
+          <li>checks if the calling string ends with a string passed as an argument; case sensitive</li>
+          <li>returns bolean</li>
+        </ul>
+      </dd>
+
+      <dt>indexOf()</dt>
+      <dd>
+        <ul>
+          <li>finds first ocurence of a specified argument; optional second argument is an integer specifying index of
+            place where to start searching; case sensitive</li>
+          <li>returns index, or -1 if not found</li>
+        </ul>
+      </dd>
+
+      <dt>lastIndexOf()</dt>
+      <dd>
+        <ul>
+          <li>the same as indexOf(), but backwards</li>
+        </ul>
+      </dd>
+
+      <dt>match()</dt>
+      <dd>
+        <ul>
+          <li>searches a string for a match against a regular expression; without g modifier (global) it finds only the
+            first one</li>
+          <li>returns the matches (as substring), index, and the input, all as an Array object, or null if not found</li>
+        </ul>
+      </dd>
+
+      <dt>repeat()</dt>
+      <dd>
+        <ul>
+          <li>finds an element at index given as an argument</li>
+          <li>returns a string of that element repeated number of times (this number is a second argument), or empty
+            string if no argument or argument 0</li>
+        </ul>
+      </dd>
+
+      <dt>replace()</dt>
+      <dd>
+        <ul>
+          <li>finds a match between a regular expression (or a specified value) and a string; does not change the
+            original string; without g modifier (global) it replaces only the first occurence</li>
+          <li>returns a new string where the specified values are replaced, or the original string if no match is found</li>
+        </ul> .
+      </dd>
+
+      <dt>search()</dt>
+      <dd>
+        <ul>
+          <li>searches for a match between a string or regular expression and a specified string</li>
+          <li>returns the index of the first character of the first match, or -1 if no match is found</li>
+        </ul>
+      </dd>
+
+      <dt>slice()</dt>
+      <dd>
+        <ul>
+          <li>extracts a section of a string, from the index specified in the first argument, to index specified by the
+            second argument (i, j-1), or end of string if there's no second argument; negative numbers are extracting
+            from the end</li>
+          <li>returns result, or the entire string if no arguments are passed, as a new string</li>
+        </ul>
+      </dd>
+
+      <dt>split()</dt>
+      <dd>
+        <ul>
+          <li>splits a string into an array of strings by separating the string into substrings, argument is the
+            separator; does not change the original string</li>
+          <li>returns an array of substrings, or the entire array of string's elements if no argument or empty argument
+            ('') are passed</li>
+        </ul>
+      </dd>
+
+      <dt>startsWith()</dt>
+      <dd>
+        <ul>
+          <li>checks if a string begins with a string passed as an argument; case sensitive</li>
+          <li>returns bolean</li>
+        </ul>
+      </dd>
+
+      <dt>substr()</dt>
+      <dd>
+        <ul>
+          <li>extracts strings of number of characters specified in the second argument from index specified in the
+            first argument; negative number extracts from the end of a string; does not change the original string</li>
+          <li>returns a substring of elements at a given range</li>
+        </ul>
+      </dd>
+
+      <dt>substring()</dt>
+      <dd>
+        <ul>
+          <li>extracts strings form index specified in the first argument to index specified in the second argument;
+            does not change the original string</li>
+          <li>returns a substring of elements at a given range</li>
+        </ul>
+      </dd>
+
+      <dt>toLowerCase()</dt>
+      <dd>
+        <ul>
+          <li>does not change the original string</li>
+          <li>returns the calling string converted to lowercase letters</li>
+        </ul>
+      </dd>
+
+      <dt>toUpperCase()</dt>
+      <dd>
+        <ul>
+          <li>does not change the original string</li>
+          <li>returns the calling string converted to uppercase letters</li>
+        </ul>
+      </dd>
+
       <dt>trim()</dt>
       <dd>
         <ul>
-          <li>removes whitespace from both sides of a string</li>
-          <li>returns new string; does not change the original string</li>
+          <li>removing whitespaces from both ends of string; does not change the original string</li>
+          <li>returns changed string</li>
         </ul>
       </dd>
+
+      <dt>trimLeft()</dt>
+      <dd>
+        <ul>
+          <li>removing whitespace from the left side</li>
+          <li>returns changed string</li>
+        </ul>
+      </dd>
+      <dt>trimRight()</dt>
+      <dd>
+        <ul>
+          <li>removing whitespace from the right side</li>
+          <li>returns changed string</li>
+        </ul>
+      </dd>
+
+    </dl>
     </dl>
 
     <p><a href="#">back to the top of page</a></p>
