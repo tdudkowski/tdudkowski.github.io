@@ -19,8 +19,6 @@
 // }
 // todayDay = todayDay + new Date().getDate(); // add number of days from this month
 
-// UTILITIES
-const counter = document.querySelector('.counter span');
 // number of days in months
 const months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 //reducer function
@@ -66,7 +64,8 @@ daysTillEnd = countDays(endDay);
 
 // DIFFERENCE
 // count difference
-const result = daysTillEnd - daysTillStart;
+const factorX = 1; // number of absent days
+const result = daysTillEnd - daysTillStart - factorX;
 // show it
 counter.textContent = result;
   
