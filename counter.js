@@ -66,7 +66,7 @@ daysTillEnd = countDays(endDay);
 
 // DIFFERENCE
 // count difference
-const factorX = 1; // number of absent days
+const factorX = 11; // number of absent days
 let result = daysTillEnd - daysTillStart;
 result-= factorX;
 // show it
