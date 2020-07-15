@@ -73,7 +73,7 @@ h3 {
   border-bottom: 1px solid #5f5f5f;
 }
 
-.doc100 {
+/* .doc100 {
   line-height: 1.3rem;
   border: 5px dashed #cc4;
   background-color: #998;
@@ -82,7 +82,7 @@ h3 {
 
 .doc100 p {
   padding: 0 1rem;
-}
+} */
 
 .counter {
   float: right;
