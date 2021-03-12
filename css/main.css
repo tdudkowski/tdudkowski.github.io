@@ -210,8 +210,8 @@ footer ul li a:hover {
   }
 
   ul {
-    /* margin-left: 100px; */
-    margin-left: 10px;
+    margin-left: 100px;
+    /* margin-left: 10px; */
   }
 
   ul.hello_world {
