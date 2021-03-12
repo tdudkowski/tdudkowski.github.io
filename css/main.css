@@ -201,7 +201,7 @@ footer ul li a:hover {
     width: 25rem;
     margin: 0.5rem;
      }
-
+    
   img.ul_logo {
     display: initial;
     float: left;
@@ -214,13 +214,7 @@ footer ul li a:hover {
     /* margin-left: 10px; */
   }
 
-  ul ul {
-    margin-left: 10px;
-    /* margin-left: 10px; */
-  }
-
-
-  ul.hello_world {
+  ul ul, ul.hello_world, .doc100 ul {
     margin-left: 1rem;
   }
 
